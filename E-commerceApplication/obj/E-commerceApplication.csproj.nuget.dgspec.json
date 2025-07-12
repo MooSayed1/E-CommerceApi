@@ -4,14 +4,14 @@
     "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/E-commerceApplication.csproj": {}
   },
   "projects": {
-    "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/E-commerceApplication.csproj": {
+    "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/E-commerceApplication.csproj",
-        "projectName": "E-commerceApplication",
-        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/E-commerceApplication.csproj",
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj",
         "packagesPath": "/home/mohamed/.nuget/packages/",
-        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/obj/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mohamed/.nuget/NuGet/NuGet.Config"
@@ -42,7 +42,84 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mohamed/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/E-commerceApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/E-commerceApplication.csproj",
+        "projectName": "E-commerceApplication",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/E-commerceApplication.csproj",
+        "packagesPath": "/home/mohamed/.nuget/packages/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/E-commerceApplication/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mohamed/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj"
+              },
+              "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj"
+              },
+              "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj"
+              },
+              "/home/mohamed/RiderProjects/E-commerceApplication/Shared/Shared.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Shared/Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -63,6 +140,261 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mohamed/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj",
+        "projectName": "Persistance",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj",
+        "packagesPath": "/home/mohamed/.nuget/packages/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mohamed/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.18, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mohamed/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/Services.Abstraction.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/Services.Abstraction.csproj",
+        "projectName": "Services.Abstraction",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/Services.Abstraction.csproj",
+        "packagesPath": "/home/mohamed/.nuget/packages/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mohamed/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mohamed/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj",
+        "projectName": "Services",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj",
+        "packagesPath": "/home/mohamed/.nuget/packages/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mohamed/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj"
+              },
+              "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/Services.Abstraction.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/Services.Abstraction.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mohamed/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mohamed/RiderProjects/E-commerceApplication/Shared/Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Shared/Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Shared/Shared.csproj",
+        "packagesPath": "/home/mohamed/.nuget/packages/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mohamed/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
