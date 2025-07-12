@@ -87,8 +87,8 @@
               "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj": {
                 "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj"
               },
-              "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj": {
-                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj"
+              "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/Persistence.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/Persistence.csproj"
               },
               "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj": {
                 "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj"
@@ -148,14 +148,14 @@
         }
       }
     },
-    "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj": {
+    "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj",
-        "projectName": "Persistance",
-        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/Persistance.csproj",
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/Persistence.csproj",
         "packagesPath": "/home/mohamed/.nuget/packages/",
-        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistance/obj/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mohamed/.nuget/NuGet/NuGet.Config"

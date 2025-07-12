@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E76CAB17-9C44-402E-924A-5DE392A2613E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance", "Persistance\Persistance.csproj", "{C17D5C4E-F4C3-483F-8950-AFD3B4DF5480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{C17D5C4E-F4C3-483F-8950-AFD3B4DF5480}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presintation", "Presintation\Presintation.csproj", "{9BC519CB-536F-4AB5-9F9C-F4CE68F651FF}"
 EndProject
