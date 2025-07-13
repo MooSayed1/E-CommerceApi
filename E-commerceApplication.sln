@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{C17D5C4E-F4C3-483F-8950-AFD3B4DF5480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presintation", "Presintation\Presintation.csproj", "{9BC519CB-536F-4AB5-9F9C-F4CE68F651FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{9BC519CB-536F-4AB5-9F9C-F4CE68F651FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{77E3FA15-5DFC-4151-B682-173444E9A7DB}"
 EndProject

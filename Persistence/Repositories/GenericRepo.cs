@@ -1,0 +1,33 @@
+using Domain.Contracts;
+using Persistance.Data.Contexts;
+
+namespace Persistance.Repositories;
+
+public class GenericRepo<TEntity,TKey> :  IGenericRepo<TEntity,TKey> where TEntity : BaseEntity<TKey>
+{
+    private readonly AppDbContext _context;
+
+    public GenericRepo(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<TEntity?> GetByIdAsync(TKey? id)
+    {
+        return await _context.Set<TEntity>().FindAsync(id);
+    }
+
+    public async Task<IEnumerable<TEntity>> GetAllAsync(bool asNoTracking = false)
+    {
+        return asNoTracking? await _context.Set<TEntity>().AsNoTracking().ToListAsync(): await _context.Set<TEntity>().ToListAsync();
+    }
+
+    public async Task AddAsync(TEntity entity) => await _context.Set<TEntity>().AddAsync(entity);
+
+    public void Update(TEntity entity) => _context.Set<TEntity>().Update(entity);
+
+    public void Delete(TEntity entity)
+    {
+        _context.Set<TEntity>().Remove(entity);
+    }
+}

@@ -90,6 +90,9 @@
               "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/Persistence.csproj": {
                 "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Persistence/Persistence.csproj"
               },
+              "/home/mohamed/RiderProjects/E-commerceApplication/Presentation/Presentation.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Presentation/Presentation.csproj"
+              },
               "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj": {
                 "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services/Services.csproj"
               },
@@ -191,6 +194,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.18, )"
@@ -200,6 +207,78 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.18, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mohamed/.dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mohamed/RiderProjects/E-commerceApplication/Presentation/Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mohamed/RiderProjects/E-commerceApplication/Presentation/Presentation.csproj",
+        "projectName": "Presentation",
+        "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Presentation/Presentation.csproj",
+        "packagesPath": "/home/mohamed/.nuget/packages/",
+        "outputPath": "/home/mohamed/RiderProjects/E-commerceApplication/Presentation/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mohamed/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/Services.Abstraction.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Services.Abstraction/Services.Abstraction.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[15.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             }
           },
           "imports": [
@@ -243,7 +322,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/mohamed/RiderProjects/E-commerceApplication/Shared/Shared.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Shared/Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -325,6 +408,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -366,7 +455,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj": {
+                "projectPath": "/home/mohamed/RiderProjects/E-commerceApplication/Domain/Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -383,6 +476,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

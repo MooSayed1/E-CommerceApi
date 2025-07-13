@@ -16,7 +16,7 @@ public class DbInitializer : IDbInitializer
     public async Task InitializeDbAsync()
     {
         try
-        {
+        { // Repositories
             if ((await _dbcontext.Database.GetPendingMigrationsAsync()).Any())
             {
                 await _dbcontext.Database.MigrateAsync();
