@@ -4,7 +4,7 @@ namespace Services.Abstraction.Interfaces;
 
 public interface IProductService
 {
-    Task <IEnumerable<ProductResultDto>> GetAllProductsAsync(bool asNoTracking = false);
+    Task <IEnumerable<ProductResultDto>> GetAllProductsAsync( string?sort,int? typeId,int? brandId,bool asNoTracking = false);
     Task<ProductResultDto?> GetProductByIdAsync(int id);
     Task<IEnumerable<BrandResultDto>> GetAllProductBrandsAsync();
     Task<IEnumerable<TypeResultDto>> GetAllProductTypeAsync();
