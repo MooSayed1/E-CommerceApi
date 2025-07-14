@@ -16,7 +16,7 @@ public class DbInitializer : IDbInitializer
     public async Task InitializeDbAsync()
     {
         try
-        { // Repositories
+        {
             if ((await _dbcontext.Database.GetPendingMigrationsAsync()).Any())
             {
                 await _dbcontext.Database.MigrateAsync();
@@ -32,7 +32,6 @@ public class DbInitializer : IDbInitializer
 
                 if (!_dbcontext.ProductTypes.Any())
                 {
-                    
                     var productsTypesData = await File.ReadAllTextAsync("../Persistence/Data/DataSeeding/types.json");
                     var types = JsonSerializer.Deserialize<List<ProductType>>(productsTypesData);
                     if (types != null)
