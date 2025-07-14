@@ -2,6 +2,7 @@ using AutoMapper;
 using Domain.Contracts;
 using Domain.Entities;
 using Services.Abstraction.Interfaces;
+using Services.Specifications;
 using Shared;
 
 namespace Services;
@@ -10,14 +11,15 @@ public class ProductService(IUnitOfWork unitOfWork, IMapper mapper) : IProductSe
 {
     public async Task<IEnumerable<ProductResultDto>> GetAllProductsAsync(bool asNoTracking = false)
     {
-        var products = await unitOfWork.GetRepo<Product, int>().GetAllAsync();
+        var products = await unitOfWork.GetRepo<Product, int>().GetAllAsync(new ProductWithBrandAndTypeSpecifications());
         var mappedProducts = mapper.Map<IEnumerable<ProductResultDto>>(products);
         return mappedProducts;
     }
 
     public async Task<ProductResultDto?> GetProductByIdAsync(int id)
     {
-        var product = await unitOfWork.GetRepo<Product, int>().GetByIdAsync(id);
+        var product = await unitOfWork.GetRepo<Product, int>()
+            .GetByIdAsync(new ProductWithBrandAndTypeSpecifications(id));
         var mappedProduct = mapper.Map<ProductResultDto?>(product);
         return mappedProduct;
     }

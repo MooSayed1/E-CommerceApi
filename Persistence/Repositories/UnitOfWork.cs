@@ -7,12 +7,12 @@ namespace Persistance.Repositories;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly AppDbContext _dbContext;
-    public ConcurrentDictionary<string, object> _repositories;
+    public ConcurrentDictionary<string, object> Repositories;
 
     public UnitOfWork(AppDbContext dbContext)
     {
         _dbContext = dbContext;
-        _repositories = new();
+        Repositories = new();
     }
 
     public async Task<int> SaveChangesAsync()
@@ -23,6 +23,6 @@ public class UnitOfWork : IUnitOfWork
     public IGenericRepo<TEntity, TKey> GetRepo<TEntity, TKey>()
         where TEntity : BaseEntity<TKey>
     {
-        return (IGenericRepo<TEntity,TKey>) _repositories.GetOrAdd(typeof(TEntity).Name,(name)=> new GenericRepo<TEntity,TKey>(_dbContext));
+        return (IGenericRepo<TEntity,TKey>) Repositories.GetOrAdd(typeof(TEntity).Name,(name)=> new GenericRepo<TEntity,TKey>(_dbContext));
     }
 }

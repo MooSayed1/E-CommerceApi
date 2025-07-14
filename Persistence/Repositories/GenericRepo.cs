@@ -3,7 +3,7 @@ using Persistance.Data.Contexts;
 
 namespace Persistance.Repositories;
 
-public class GenericRepo<TEntity,TKey> :  IGenericRepo<TEntity,TKey> where TEntity : BaseEntity<TKey>
+public class GenericRepo<TEntity, TKey> : IGenericRepo<TEntity, TKey> where TEntity : BaseEntity<TKey>
 {
     private readonly AppDbContext _context;
 
@@ -19,7 +19,20 @@ public class GenericRepo<TEntity,TKey> :  IGenericRepo<TEntity,TKey> where TEnti
 
     public async Task<IEnumerable<TEntity>> GetAllAsync(bool asNoTracking = false)
     {
-        return asNoTracking? await _context.Set<TEntity>().AsNoTracking().ToListAsync(): await _context.Set<TEntity>().ToListAsync();
+        return asNoTracking
+            ? await _context.Set<TEntity>().AsNoTracking().ToListAsync()
+            : await _context.Set<TEntity>().ToListAsync();
+    }
+
+    public Task<TEntity?> GetByIdAsync(Specifications<TEntity> specifications)
+    {
+        var query = SpecificationEvaluator.GetQuery(_context.Set<TEntity>(), specifications);
+        return query.FirstOrDefaultAsync();
+    }
+
+    public async Task<IEnumerable<TEntity>> GetAllAsync(Specifications<TEntity> specifications, bool asNoTracking = false)
+    {
+        return await SpecificationEvaluator.GetQuery(_context.Set<TEntity>(), specifications).ToListAsync();
     }
 
     public async Task AddAsync(TEntity entity) => await _context.Set<TEntity>().AddAsync(entity);
