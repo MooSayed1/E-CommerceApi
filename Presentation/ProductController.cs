@@ -11,7 +11,13 @@ public class ProductController(IServiceManager serviceManager) : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<ProductResultDto>>> GetAllProducts(string?sort,int? typeId,int? brandId)
     {
-        var products = await serviceManager.ProductService.GetAllProductsAsync(sort,typeId,brandId);
+        SpecificationsParam specificationsParam = new SpecificationsParam()
+        {
+            Sort = sort,
+            TypeId = typeId,
+            BrandId = brandId
+        };
+        var products = await serviceManager.ProductService.GetAllProductsAsync(specificationsParam);
         return Ok(products);
     }
 

@@ -1,4 +1,5 @@
 using Domain.Entities;
+using Shared;
 
 namespace Services.Specifications;
 
@@ -16,16 +17,16 @@ public class ProductWithBrandAndTypeSpecifications : Specifications<Product>
         IncludeExpressions.Add(product => product.ProductType);
     }
     
-    public ProductWithBrandAndTypeSpecifications(string? sort,int? typeId,int? brandId): base(product=>
-        (!brandId.HasValue||product.BrandId==brandId)&&(!typeId.HasValue||product.TypeId==typeId)
+    public ProductWithBrandAndTypeSpecifications(SpecificationsParam specificationsParam): base(product=>
+        (!specificationsParam.BrandId.HasValue||product.BrandId==specificationsParam.BrandId)&&(!specificationsParam.TypeId.HasValue||product.TypeId==specificationsParam.TypeId)
         )
     {
         IncludeExpressions.Add(product => product.ProductBrand);
         IncludeExpressions.Add(product => product.ProductType);
 
-        if (sort is not null)
+        if (specificationsParam.Sort is not null)
         {
-            switch (sort.ToLower().Trim())
+            switch (specificationsParam.Sort.ToLower().Trim())
             {
                 case "pricedesc":
                     SetOrderByDescending(product => product.Price);
