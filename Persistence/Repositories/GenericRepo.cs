@@ -27,12 +27,12 @@ public class GenericRepo<TEntity, TKey> : IGenericRepo<TEntity, TKey> where TEnt
     public Task<TEntity?> GetByIdAsync(Specifications<TEntity> specifications)
     {
         var query = SpecificationEvaluator.GetQuery(_context.Set<TEntity>(), specifications);
-        return query.FirstOrDefaultAsync();
+        return query!.FirstOrDefaultAsync();
     }
 
     public async Task<IEnumerable<TEntity>> GetAllAsync(Specifications<TEntity> specifications, bool asNoTracking = false)
     {
-        return await SpecificationEvaluator.GetQuery(_context.Set<TEntity>(), specifications).ToListAsync();
+        return await SpecificationEvaluator.GetQuery(_context.Set<TEntity>(), specifications)!.ToListAsync();
     }
 
     public async Task AddAsync(TEntity entity) => await _context.Set<TEntity>().AddAsync(entity);

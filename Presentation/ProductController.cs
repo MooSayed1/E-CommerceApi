@@ -9,9 +9,9 @@ namespace Presintation;
 public class ProductController(IServiceManager serviceManager) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ProductResultDto>>> GetAllProducts([FromQuery]SpecificationsProductParams productParams)
+    public async Task<ActionResult<IEnumerable<ProductResultDto>>> GetAllProducts([FromQuery]specProductParam productParam)
     {
-        var products = await serviceManager.ProductService.GetAllProductsAsync(productParams);
+        var products = await serviceManager.ProductService.GetAllProductsAsync(productParam);
         return Ok(products);
     }
 
