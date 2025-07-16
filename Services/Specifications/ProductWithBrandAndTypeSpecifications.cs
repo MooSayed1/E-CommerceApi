@@ -17,24 +17,24 @@ public class ProductWithBrandAndTypeSpecifications : Specifications<Product>
         IncludeExpressions.Add(product => product.ProductType);
     }
     
-    public ProductWithBrandAndTypeSpecifications(SpecificationsParam specificationsParam): base(product=>
-        (!specificationsParam.BrandId.HasValue||product.BrandId==specificationsParam.BrandId)&&(!specificationsParam.TypeId.HasValue||product.TypeId==specificationsParam.TypeId)
+    public ProductWithBrandAndTypeSpecifications(SpecificationsProductParams specificationsProductParams): base(product=>
+        (!specificationsProductParams.BrandId.HasValue||product.BrandId==specificationsProductParams.BrandId)&&(!specificationsProductParams.TypeId.HasValue||product.TypeId==specificationsProductParams.TypeId)
         )
     {
         IncludeExpressions.Add(product => product.ProductBrand);
         IncludeExpressions.Add(product => product.ProductType);
 
-        if (specificationsParam.Sort is not null)
+        if (specificationsProductParams.Sort is not null)
         {
-            switch (specificationsParam.Sort.ToLower().Trim())
+            switch (specificationsProductParams.Sort)
             {
-                case "pricedesc":
+                case ProductSortOptions.PriceDesc:
                     SetOrderByDescending(product => product.Price);
                     break;
-                case "priceasc":
+                case ProductSortOptions.PriceAsc:
                     SetOrderByAscending(product => product.Price);
                     break;
-                case "nameasc":
+                case ProductSortOptions.NameAsc:
                     SetOrderByAscending(product => product.Name);
                     break;
                 default:
